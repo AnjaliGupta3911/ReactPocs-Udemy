@@ -7,7 +7,6 @@ let idx = 0;
 
 function App() {
   const [itemList, setItemList] = useState([]);
-  let packedCount = 0;
 
   function List({ itemObj }) {
     function handleCheckBox() {
@@ -39,7 +38,7 @@ function App() {
             </>
           )}
         </span>
-        <button onClick={removeItem}>x</button>
+        <button onClick={removeItem}>❌</button>
       </div>
     );
   }
@@ -72,7 +71,7 @@ function App() {
       <div className="list">
         <li>
           {itemList.map((itemObj) => (
-            <List itemObj={itemObj} />
+            <List itemObj={itemObj} key={itemObj.id} />
           ))}
         </li>
 
@@ -112,7 +111,7 @@ function App() {
         >
           <select className="select">
             {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-              <option>{num}</option>
+              <option key={num}>{num}</option>
             ))}
           </select>
           <input type="text" placeholder="Items.." className="input" />
@@ -123,7 +122,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <Logo />
       <Form />
       <PackingList />

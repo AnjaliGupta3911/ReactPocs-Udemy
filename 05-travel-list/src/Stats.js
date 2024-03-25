@@ -5,10 +5,10 @@ export default function Stats({ itemList }) {
   });
 
   return (
-    <h3 className="stats">
+    <footer className="stats">
       🧳 You have {itemList.length} items on your list, and you have already
       packed {packedCount} (
       {itemList.length == 0 ? 0 : (packedCount * 100) / itemList.length}%)
-    </h3>
+    </footer>
   );
 }
