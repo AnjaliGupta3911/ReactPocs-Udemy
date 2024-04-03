@@ -2,7 +2,6 @@ import Friend from "./Friend";
 
 export default function FriendList({
   friends,
-  setFriends,
   selectedFriend,
   setSelectedFriend,
 }) {

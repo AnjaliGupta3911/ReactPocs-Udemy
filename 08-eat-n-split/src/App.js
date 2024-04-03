@@ -28,7 +28,6 @@ function App() {
       <ul className="sidebar">
         <FriendList
           friends={friends}
-          setFriends={setFriends}
           selectedFriend={selectedFriend}
           setSelectedFriend={setSelectedFriend}
         />
